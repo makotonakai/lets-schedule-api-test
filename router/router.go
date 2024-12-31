@@ -21,6 +21,7 @@ func Initialize() *echo.Echo {
 	api := e.Group("/api")
 	api.GET("/", controllers.HealthCheck)
 	api.POST("/signup", controllers.CreateUser)
+	api.POST("/login", controllers.Login)
 
 	return e
 
