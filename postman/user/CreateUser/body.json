@@ -1,0 +1,9 @@
+{
+  "user_name": "testuser",
+  "email_address": "test@example.com",
+  "password": "password123",
+  "is_admin": false,
+  "can_login": true,
+  "created_at": "2024-12-31T00:00:00Z",
+  "updated_at": "2024-12-31T00:00:00Z"
+}
