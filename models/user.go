@@ -2,9 +2,6 @@ package models
 
 import (
 	"time"
-	"regexp"
-	"strings"
-	"gorm.io/gorm"
 )
 
 type User struct {	
