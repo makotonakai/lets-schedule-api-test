@@ -2,14 +2,14 @@ package controllers
 
 import (
 	"net/http"
-	"strconv"
 
 	"github.com/labstack/echo/v4"
+	"github.com/makotonakai/lets-schedule-api-test/config"
 	"github.com/makotonakai/lets-schedule-api-test/models"
 )
 
 var maxIndex = 1
-var mockDB = map[int]*User{}
+var mockDB = map[int]*models.User{}
 
 
 func HealthCheck(c echo.Context) error {
