@@ -22,6 +22,7 @@ func Initialize() *echo.Echo {
 	api.GET("/", controllers.HealthCheck)
 	api.POST("/signup", controllers.CreateUser)
 	api.POST("/login", controllers.Login)
+	api.POST("/send-email", controllers.SendEmail)
 
 	return e
 
