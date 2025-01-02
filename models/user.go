@@ -2,6 +2,7 @@ package models
 
 import (
 	"time"
+	"github.com/makotonakai/lets-schedule-api-test/config"
 )
 
 type User struct {	
@@ -13,4 +14,13 @@ type User struct {
 	CanLogin bool `json:"can_login"`	
 	CreatedAt time.Time `json:"created_at"`	
 	UpdatedAt time.Time `json:"updated_at"`	
+}
+
+func GetUserIdFromEmailAddress(users map[string]*User, address string) (int, error) {
+	for _, user := range users {
+		if user.EmailAddress == address {
+			return user.Id, nil
+		}
+	}
+	return -1, config.ErrEmailAddressNotFound
 }
